@@ -1,0 +1,20 @@
+{
+  "name": "inicializando-sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -e js,scss -x \"npm run compile-sass && node src/index.js\"",
+    "compile-sass": "npx node-sass ./src/public/sass/index.scss ./src/public/css/estilos.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "handlebars": "^4.7.8",
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.0.3",
+    "pg": "^8.11.3"
+  }
+}

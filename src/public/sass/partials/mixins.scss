@@ -1,0 +1,21 @@
+@mixin flex{
+	display:flex;
+}
+
+
+@mixin box-circulo ($border-radius:50%,$border: 1px solid $C-link){
+	border-radius: $border-radius;
+	border: $border;
+}
+
+@mixin box($width:100px,$height:100px){
+	width: $width;
+	height: $height;
+	@include box-circulo;
+}
+
+@mixin italic-links{
+	a{
+		font-style:italic;
+	}
+}

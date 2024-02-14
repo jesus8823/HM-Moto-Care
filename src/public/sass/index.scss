@@ -1,0 +1,281 @@
+
+
+@import "partials/variables.scss";
+@import "partials/mixins.scss";
+@import "partials/breakpoints.scss";
+@import "partials/functions.scss";
+
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+		background: #181918;
+}
+
+
+/*&navegacion*/
+.navegacion-contenedor{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+		padding: em(2);
+		align-items: center;
+		position: fixed;
+		z-index: 100;
+		transition: 1S;
+
+	.logo_contenedor{
+		display: flex;
+		align-items: center;
+		margin-left: em(10);
+
+		p{
+			font-size: em(25);
+			font-weight: 800;
+			color: $C-text-menu;
+		}
+	}
+
+	.img_contenedor{
+		width: em(90);
+		height: em(90);
+		overflow: hidden;
+	}
+	.img_contenedor img{
+		object-fit: 100%;
+		width: 100%;
+		height: 100%;
+	}
+
+	.links_contenedor{
+		display: flex;
+		gap: em(25);
+		margin-right: em(25);
+
+		a{
+			color: $C-text-menu;
+			text-decoration: none;
+			font-size: em(20);
+			font-weight: 100;
+
+		} a:hover{
+
+			color: $C-text-menu2;
+		}
+
+			
+	}
+}
+.scrolled {
+  background:  #01000e;
+}
+
+
+/*&Main principal*/
+.main_contendor_principal{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: em(5);
+
+
+		h2{
+				color: $C-text-menu2;
+				font-size: em(60);
+				text-align: center;
+				z-index: 1;
+				font-weight: 800;
+				text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+
+			}
+			a{
+				color: $C-text-menu;
+				background:$Back-menu;
+				font-size: em(20);
+				border-left:$C-text-menu2;
+				border-bottom:$C-text-menu2;
+				text-decoration: none;
+				padding: em(10) em(15);
+				border-radius:em(5) ;
+				z-index: 1;
+			}a:hover{
+				border: $C-text-menu2 ;
+				color: $C-text-menu2 ;
+			}
+	
+}
+
+
+.slider-container {
+  width: 100%;
+  height: 100%; /* Ajusta la altura según tus necesidades */
+  overflow: hidden;
+  position: absolute;
+}
+
+.slider-image {
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0%;
+  transform: translate(-60%, -40%) scale(120%);
+  transition: opacity 1s, transform 15s;
+}
+
+.active {
+  opacity: 100%;
+  transform: translate(-50%, -50%) scale(140%);
+}
+ .pelicula{
+    background: linear-gradient(90deg, rgba(1,0,23,1) 0%, rgba(0,0,42,0.7) 30%, rgba(1,1,80,0.3) 50%, rgba(0,77,130,0.2) 100%);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+  }
+
+
+/*&seccion motos en venta*/
+.titulo{
+	width: 50%;
+	padding: em(10);
+	background: $Back-menu;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin:auto;
+
+	h3{
+		width: 100%;
+		color: $C-text-menu2;
+		font-size: em(30);
+
+	}
+	p{
+		font-size: em(18);
+		font-weight: 100;
+		color: $C-text-menu;
+		width: 100%;
+
+	}
+	a{
+		text-decoration: none;
+		color: $C-text-menu2 ;
+	}
+
+}
+
+.seccion-ofertas{
+	width: 100%;
+background-attachment: fixed;
+  background-image: linear-gradient(90deg, rgba(1,0,23,1) 0%, rgba(0,0,42,0.7) 30%, rgba(1,1,80,0.3) 50%, rgba(0,77,130,0.2) 100%), url('/img/fondos/fondo1.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: em(30);
+}
+.motos_venta_contenedor{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: em(15);
+	
+
+
+	.tarjeta{
+		position: relative;
+		width: 30%;
+		height: em(250);
+		padding: em(10);
+		box-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+		cursor: pointer;
+		transition: transform 0.3s, background-color 0.3s;
+
+		h4{
+			width: 100%;
+			color: $C-text-menu;
+			text-align: center;
+			text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+			font-size: em(25);
+			z-index: 1;
+		}
+		img{
+			position: absolute;
+			bottom: 0;
+			object-fit: 100%;
+			width: 100%;
+			height: 80%;
+
+		}
+	}.tarjeta:hover{
+		 transform: scale(1.1); /* Cambia el tamaño al pasar el mouse */
+  	 background-color: #f0f0f0;
+  	 color: $C-text-menu2; 
+	}
+}
+
+.seccion-servicios{
+	width: 100%;
+background-attachment: fixed;
+  background-image: linear-gradient(90deg, rgba(1,0,23,1) 0%, rgba(0,0,42,0.7) 30%, rgba(1,1,80,0.3) 50%, rgba(0,77,130,0.2) 100%), url('/img/fondos/fondo2.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: em(30);
+}
+.servicios_contenedor{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: em(15);
+	
+
+
+	.tarjeta{
+		position: relative;
+		width: 30%;
+		height: em(250);
+		padding: em(10);
+		box-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+		cursor: pointer;
+		transition: transform 0.3s, background-color 0.3s;
+		overflow: hidden;
+
+		h4{
+			width: 100%;
+			color: $C-text-menu;
+			text-align: center;
+			text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+			font-size: em(25);
+			z-index: 1;
+		}
+		img{
+			position: absolute;
+			bottom: 0;
+			object-fit: 100%;
+			width: 100%;
+			height: 80%;
+
+		}
+	}.tarjeta:hover{
+		 transform: scale(1.1); /* Cambia el tamaño al pasar el mouse */
+  	 background-color: #f0f0f0;
+  	 color: $C-text-menu2; 
+	}
+}
+
+
+
+
+/*  &nosotros*/
