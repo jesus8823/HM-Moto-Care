@@ -25,6 +25,7 @@ body{
 		padding: em(2);
 		align-items: center;
 		position: fixed;
+		top: 0;
 		z-index: 100;
 		transition: 1S;
 
@@ -205,7 +206,7 @@ background-attachment: fixed;
 
 		h4{
 			width: 100%;
-			color: $C-text-menu;
+			color: $C-parrafo;
 			text-align: center;
 			text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
 			font-size: em(25);
@@ -221,8 +222,8 @@ background-attachment: fixed;
 		}
 	}.tarjeta:hover{
 		 transform: scale(1.1); /* Cambia el tamaño al pasar el mouse */
-  	 background-color: #f0f0f0;
-  	 color: $C-text-menu2; 
+  	 background-color: $Back-tarjeta1;
+  	 border-radius: em(5);
 	}
 }
 
@@ -279,3 +280,179 @@ background-attachment: fixed;
 
 
 /*  &nosotros*/
+
+
+
+/*&&Pagina Motos en venta*/
+
+/*&inicio motos en venta*/
+
+.banco_img_contenedor {
+  width: 85%;
+  height: auto;
+ 	display: flex;
+ 	flex-wrap: wrap;
+ 	gap: em(10);
+ 	justify-content: center;
+  margin:auto;
+	margin-top: em(100);
+
+			img {
+		  	transition: transform 0.3s;
+		    object-fit: 100%;
+		    width: 100%;
+		   	height:100%;
+		  }
+
+
+
+	    a {
+		  	width: calc(50% - 10px);
+		  	height: em(350);
+				position: relative;
+				display: inline-block;
+				border-radius: em(5);
+				transition: transform 0.3s, background-color 0.3s;
+			}
+				
+				a:hover{
+					transform: scale(1.1);
+					z-index: 2;
+					background-color: $Back-tarjeta1;
+				} 
+				a:hover .detalles{
+		    	opacity: 1;
+		    }
+}
+
+	@media only screen and (max-width: 700px) {
+		.banco_img_contenedor a{width: calc(100% - 10px);}
+	}
+
+	.detalles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+
+			h3{
+				color: $C-parrafo;
+				margin-bottom: 10px;
+				text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+			}
+			li{
+				color: $C-parrafo;
+				font-size: em(15);
+			}
+			p{
+				width: 100%;
+				font-size: em(18);
+				line-height: em(25);
+				color: $C-parrafo;
+				text-align: justify;
+				background-color: rgba(0, 0, 0, 0.8);
+				position: absolute;
+			  bottom:0; 
+			  left:0;
+			  padding:em(20);  
+			  border-radius: em(5);
+			}
+		}
+
+ .contenedor_datos{
+    display: flex;
+    justify-content: space-between;
+  }
+  .contenedor_sub_datos{
+    line-height: em(25);
+    padding: em(10);
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: em(5);
+  }
+
+
+/*&&pagina servicios*/
+/*&Servicios*/
+
+.mantenimiento_contenedor{
+	width: 60%;
+	height: em(350);
+	margin: auto;
+	margin-top: em(120);
+	margin-bottom: em(20);
+	border-left: 1px solid $C-text-menu2 ;
+	border-bottom: 1px solid $C-text-menu2;
+	border-radius: em(5);
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	img{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		filter: opacity(60%);
+	}
+	div{
+		z-index: 1;
+		background: rgba(0, 0, 0, 0.6);
+		border-radius: em(5);
+		padding: em(10);
+	}
+	h3{
+		color:$C-text-menu2;
+    font-size: em(40);
+    margin-bottom:em(3);
+    width: 100%;
+    text-align: center;
+	}
+	p{
+		color: $C-parrafo;
+		font-size: em(20); 
+    width: 100%;
+    text-align: center;
+	}
+}
+
+.contenedor_otros_servicios{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.tarjeta_otros_servicios{
+	width: 33%;
+	height: em(300);
+	gap: em(10);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: space-between;
+	overflow: hidden;
+	h3{
+		z-index: 1;
+	}
+	p{
+		z-index: 1;
+	}
+
+	img{
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+		filter: opacity(50%);
+	}
+}
+
+
+

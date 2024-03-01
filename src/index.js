@@ -31,7 +31,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 //rutas
 app.use(require("./routes/"));
-
+app.use("/en_venta", require("./routes/venta_motos"));
+app.use("/servicios", require("./routes/servicios"));
 
 
 
